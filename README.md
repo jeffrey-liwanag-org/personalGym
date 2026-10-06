@@ -5,7 +5,8 @@ and an animated GIF each, a single-file HTML catalog to browse them, and two 12-
 programmes built on it.
 
 Live: https://jeffrey-liwanag-org.github.io/personalGym/ (general) and
-https://jeffrey-liwanag-org.github.io/personalGym/women/ (women's version).
+https://jeffrey-liwanag-org.github.io/personalGym/women/ (women's version) and
+https://jeffrey-liwanag-org.github.io/personalGym/women/no-weights/ (no weights).
 
 ## Layout
 
@@ -23,8 +24,11 @@ programs/
   weight-loss-plan.opengym.json         the same programme as an openGym plan file (Plan → Import)
   weight-loss-women-program.html        the women's version: lower-body emphasis, shorter rests
   weight-loss-women-plan.opengym.json   its openGym plan file
+  weight-loss-women-no-weights-program.html   no weights at all: bodyweight + band at maintenance
+  weight-loss-women-no-weights-plan.opengym.json   volume, cardio and steps doing more of the work
 docs/
-  index.html, women/index.html          the two programmes as published on GitHub Pages; demos
+  index.html, women/index.html, women/no-weights/index.html
+                                        the programmes as published on GitHub Pages; demos
                                         stream from the dataset's jsDelivr mirror instead of media/
 tools/
   build-catalog.js        regenerates data/exercises.json, media/ and the catalog page

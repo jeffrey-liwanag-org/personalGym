@@ -28,7 +28,7 @@ const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
 const GENERAL = {
   slug: 'weight-loss', pagePath: '', planName: '12-week weight loss',
   title: 'Weight loss programme', subtitle: '12 weeks · 4 gym days + 1 easy cardio',
-  sibling: { label: "Women's version", href: 'women/' },
+  siblings: [{ label: "Women's version", href: 'women/' }, { label: 'No-weights version', href: 'women/no-weights/' }],
   audience: 'Written for someone with normal gym access (dumbbells, a barbell, cables and machines), new to or returning to training, with 45 to 55 minutes per session. General training advice, not medical advice. If you have a condition or an injury, check with a professional first.',
   why: [
     '<b>Fat loss comes from the kitchen, muscle comes from the gym.</b> Aim for a moderate deficit of about 300 to 500 kcal a day and 0.5 to 1 % of body weight lost per week. Faster than that and strength starts to go.',
@@ -113,7 +113,7 @@ const GENERAL = {
 const WOMEN = {
   slug: 'weight-loss-women', pagePath: 'women', planName: '12-week weight loss (women)',
   title: "Weight loss programme · women's version", subtitle: '12 weeks · 4 gym days + 1 easy cardio · lower-body emphasis',
-  sibling: { label: 'General version', href: '../' },
+  siblings: [{ label: 'General version', href: '../' }, { label: 'No-weights version', href: 'no-weights/' }],
   audience: 'Written for a woman with normal gym access (dumbbells, a barbell, cables and machines), new to or returning to training, with 45 to 55 minutes per session. General training advice, not medical advice. If you are pregnant, postpartum, or have a condition or an injury, check with a professional first.',
   why: [
     '<b>Same engine, different emphasis.</b> Muscle and strength adapt the same way in women and men, so the fundamentals are unchanged: a moderate deficit of about 300 to 500 kcal a day, 0.5 to 1 % of body weight per week, protein at 1.6 to 2.2 g per kg.',
@@ -194,7 +194,84 @@ const WOMEN = {
   ],
 }
 
-const PROGRAMS = [GENERAL, WOMEN]
+// No weights at all: bodyweight and a loop band at maintenance volume (two sets), cardio and
+// steps doing more of the work. The muscle-retention signal is weaker than with loads, which
+// the page says plainly; it is the honest floor for "lean, not bigger", not the best route.
+const NO_WEIGHTS = {
+  slug: 'weight-loss-women-no-weights', pagePath: 'women/no-weights', planName: '12-week weight loss (women, no weights)',
+  title: "Weight loss programme · no weights", subtitle: '12 weeks · 4 bodyweight days + 1 easy cardio · nothing heavier than a band',
+  siblings: [{ label: 'With weights', href: '../' }, { label: 'General version', href: '../../' }],
+  audience: 'Written for a woman who wants to lose fat and stay lean without lifting weights. Needs a loop band, a sturdy bench or chair, something to hang under for inverted rows (a bar, a table edge, a suspension strap), and a treadmill, elliptical or somewhere to walk. General training advice, not medical advice. If you are pregnant, postpartum, or have a condition or an injury, check with a professional first.',
+  why: [
+    '<b>You cannot gain muscle on this.</b> Muscle needs a calorie surplus; this programme runs a deficit of about 300 to 500 kcal a day. Two sets of bodyweight work is a maintenance dose: enough to tell the body to keep the muscle it has, so what comes off is fat, and not enough to add size.',
+    '<b>Why there is still resistance work.</b> Without any, about a quarter of the weight lost is muscle, and the result is lighter but softer. Push-ups, rows, bridges and lunges are the minimum that prevents that. A loop band is the only equipment.',
+    '<b>Cardio and steps carry more of the load.</b> Steady cardio is longer than in the weighted versions and the step target is 10 to 12k every day. Easy pace burns calories without wrecking appetite or recovery.',
+    '<b>Progress is reps, not weight.</b> Every clean session adds a rep. Reps climbing is the sign the muscle is being kept. If they stall for weeks, the deficit is too big, not the training too easy.',
+    '<b>Protein still matters.</b> 1.6 to 2.2 g per kg of body weight a day. It is the biggest lever for keeping muscle in a deficit, with or without weights.',
+    '<b>Do not under-eat.</b> If periods become irregular or stop, the deficit is too big. Iron-rich foods matter when menstruating.',
+  ],
+  phases: [
+    ['Weeks 1–4 · Learn and build', ['Numbers as written. Leave 2 to 3 reps in the tank on the last set.', 'Cardio at a pace where talking is easy. Steps 10k a day.', 'Weigh in twice a week, watch the weekly average, and expect it to swing with your cycle.']],
+    ['Weeks 5–8 · More easy work', ['Steady cardio to 45 min; incline up before speed.', 'Steps to 12k a day.', 'Scale stuck for two weeks? Trim 100 to 200 kcal from the day, not the training.']],
+    ['Weeks 9–12 · Push', ['Swap both cardio days for intervals: 8 × 1 min hard, 1 min easy, after a warm-up.', 'Keep the bodyweight work at two sets; do not add a third.', 'Week 12 is a deload: one set of everything, then reassess.']],
+  ],
+  sources: WOMEN.sources,
+  routines: [
+    {
+      id: 'wlnw-a', name: 'Lower · Glutes', emoji: 'legs', day: 1, minutes: 35,
+      ex: [
+        { id: '1685', sets: 2, reps: 15, restSec: 45, note: 'Heels down, sit between the knees, reach tall at the top. The squat pattern for the week.' },
+        { id: '3013', sets: 2, reps: 20, restSec: 45, note: 'Squeeze at the top for a second. Ribs down, no arching.' },
+        { id: '1460', sets: 2, reps: 20, side: true, restSec: 45, note: 'Reps are the total across both legs. Long step, front knee over the laces.' },
+        { id: '3236', sets: 2, reps: 15, sg: 'a1', restSec: 45, note: 'Superset with side hip abduction. Band just above the knees, push the knees out the whole way up.' },
+        { id: '0710', sets: 2, reps: 20, side: true, sg: 'a1', restSec: 45, note: 'Reps are the total across both sides. Toes forward, not up.' },
+        { id: '3561', sets: 2, reps: 20, restSec: 45, note: 'Hips stay level while the knee lifts. Count both legs as one rep.' },
+        { id: '0464', sets: 2, mode: 'time', sec: 30, prog: 'time', restSec: 45 },
+        { id: '3666', sets: 1, min: 20, speed: 5.5, note: 'Finisher. Incline up to where talking takes effort, then hold it.' },
+      ],
+    },
+    {
+      id: 'wlnw-b', name: 'Cardio', emoji: 'figureRun', day: 2, minutes: 45,
+      ex: [
+        { id: '3666', sets: 1, min: 40, speed: 5.5, note: 'Steady state. You should be able to talk in full sentences. Raise the incline before the speed. A brisk outdoor walk is a fair swap.' },
+        { id: '0276', sets: 2, mode: 'time', sec: 40, prog: 'time', restSec: 45, note: 'Low back pressed into the floor the whole time.' },
+      ],
+    },
+    {
+      id: 'wlnw-c', name: 'Upper & Core', emoji: 'figureStrength', day: 4, minutes: 35,
+      ex: [
+        { id: '0662', sets: 2, reps: 8, sg: 'c1', restSec: 45, note: 'Superset with inverted rows. Hands on a bench or knees on the floor if 8 clean reps is not there yet.' },
+        { id: '0499', sets: 2, reps: 8, sg: 'c1', restSec: 45, note: 'Under a bar, a sturdy table edge or a strap. The more upright you stand, the easier it gets.' },
+        { id: '0129', sets: 2, reps: 10, restSec: 45, note: 'Shoulders down and back; stop where the front of the shoulder pulls.' },
+        { id: '2801', sets: 2, reps: 12, sg: 'c2', restSec: 45, note: 'Superset with Russian twists. Low back stays on the floor.' },
+        { id: '0687', sets: 2, reps: 20, sg: 'c2', restSec: 45, note: 'Count both sides as one rep. Slow and controlled.' },
+        { id: '0630', sets: 2, mode: 'time', sec: 40, prog: 'time', restSec: 45 },
+        { id: '2612', sets: 5, mode: 'time', sec: 60, prog: 'time', restSec: 30, note: 'Finisher. Rest when you trip, then straight back in.' },
+      ],
+    },
+    {
+      id: 'wlnw-d', name: 'Full Body Circuit', emoji: 'bolt', day: 6, minutes: 40,
+      ex: [
+        { id: '3769', sets: 2, reps: 20, side: true, restSec: 45, note: 'Reps are the total across both legs. Back leg crosses behind; front knee tracks over the toes.' },
+        { id: '2368', sets: 2, reps: 16, side: true, restSec: 45, note: 'Reps are the total across both legs. Torso tall, drop straight down.' },
+        { id: '0489', sets: 2, reps: 12, restSec: 45, note: 'Hips on the pad, not the stomach. Squeeze the glutes to come up; do not arch past straight. On the floor, a superman hold is the swap.' },
+        { id: '0514', sets: 2, reps: 10, restSec: 60, note: 'Land soft, knees over toes. Skip the jump and do a fast squat if the knees complain.' },
+        { id: '1160', sets: 2, mode: 'reps', reps: 8, restSec: 60, note: 'Step back instead of jumping if you need to. This is the finisher pace.' },
+        { id: '0459', sets: 2, mode: 'time', sec: 30, prog: 'time', restSec: 45, note: 'Low back on the floor; the lower the legs, the harder it is.' },
+        { id: '3666', sets: 1, min: 15, speed: 5.5, note: 'Finisher. Incline up to where talking takes effort, then hold it.' },
+      ],
+    },
+    {
+      id: 'wlnw-e', name: 'Easy Cardio', emoji: 'heart', day: 0, minutes: 40,
+      ex: [
+        { id: '2141', sets: 1, min: 35, speed: 6, note: 'Recovery pace. A brisk outdoor walk or a bike ride is a fair swap.' },
+        { id: '3013', sets: 2, reps: 20, restSec: 30, note: 'Optional. Squeeze at the top for a second.' },
+      ],
+    },
+  ],
+}
+
+const PROGRAMS = [GENERAL, WOMEN, NO_WEIGHTS]
 
 // --- plan file ------------------------------------------------------------------------------
 const PAGE_ONLY = new Set(['note'])
@@ -235,11 +312,13 @@ function prescription(cfg) {
   const cap = cfg.repsMax ? 'climb to ' + cfg.repsMax : ''
   return { big: cfg.sets + ' × ' + range, small: [side, cap].filter(Boolean).join(' · ') || (cfg.sets + ' sets') }
 }
+const BW_EQ = new Set(['body weight', 'resistance band', 'band'])
 function progressionLabel(cfg) {
   if (cfg.min != null) return 'Add 5 min every two weeks'
   if (cfg.prog === 'time') return 'Hold every set in full → add 5 s next time'
   if (cfg.prog === 'double') return 'Top of the range in every set → add weight, start at the bottom again'
   if (cfg.repsMax) return 'Every rep → one more next time; at the cap, add a set'
+  if (BW_EQ.has(IDX[cfg.id].eq)) return 'Every rep → one more next time'
   return 'Every rep → add weight next time'
 }
 const setCount = cfg => cfg.min != null ? 1 : cfg.sets
@@ -399,7 +478,7 @@ code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:13px}
 <body>
 <div class="page">
 <div class="bar">
-  <h1>${esc(p.title)} <small>${esc(p.subtitle)} · <a href="${p.sibling.href}">${esc(p.sibling.label)} →</a></small></h1>
+  <h1>${esc(p.title)} <small>${esc(p.subtitle)}${p.siblings.map(s => ' · <a href="' + s.href + '">' + esc(s.label) + ' →</a>').join('')}</small></h1>
   <div class="tabs" id="tabs">${tabs}</div>
 </div>
 

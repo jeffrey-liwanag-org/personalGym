@@ -1,0 +1,238 @@
+{
+  "opengym_plan": 1,
+  "exported": "2026-10-06",
+  "name": "12-week weight loss (women, no weights)",
+  "unit": "kg",
+  "week": {
+    "0": [
+      "wlnw-e"
+    ],
+    "1": [
+      "wlnw-a"
+    ],
+    "2": [
+      "wlnw-b"
+    ],
+    "4": [
+      "wlnw-c"
+    ],
+    "6": [
+      "wlnw-d"
+    ]
+  },
+  "routines": [
+    {
+      "id": "wlnw-a",
+      "name": "Lower · Glutes",
+      "emoji": "legs",
+      "ex": [
+        {
+          "id": "1685",
+          "sets": 2,
+          "reps": 15,
+          "restSec": 45
+        },
+        {
+          "id": "3013",
+          "sets": 2,
+          "reps": 20,
+          "restSec": 45
+        },
+        {
+          "id": "1460",
+          "sets": 2,
+          "reps": 20,
+          "side": true,
+          "restSec": 45
+        },
+        {
+          "id": "3236",
+          "sets": 2,
+          "reps": 15,
+          "sg": "a1",
+          "restSec": 45
+        },
+        {
+          "id": "0710",
+          "sets": 2,
+          "reps": 20,
+          "side": true,
+          "sg": "a1",
+          "restSec": 45
+        },
+        {
+          "id": "3561",
+          "sets": 2,
+          "reps": 20,
+          "restSec": 45
+        },
+        {
+          "id": "0464",
+          "sets": 2,
+          "mode": "time",
+          "sec": 30,
+          "prog": "time",
+          "restSec": 45
+        },
+        {
+          "id": "3666",
+          "sets": 1,
+          "min": 20,
+          "speed": 5.5
+        }
+      ]
+    },
+    {
+      "id": "wlnw-b",
+      "name": "Cardio",
+      "emoji": "figureRun",
+      "ex": [
+        {
+          "id": "3666",
+          "sets": 1,
+          "min": 40,
+          "speed": 5.5
+        },
+        {
+          "id": "0276",
+          "sets": 2,
+          "mode": "time",
+          "sec": 40,
+          "prog": "time",
+          "restSec": 45
+        }
+      ]
+    },
+    {
+      "id": "wlnw-c",
+      "name": "Upper & Core",
+      "emoji": "figureStrength",
+      "ex": [
+        {
+          "id": "0662",
+          "sets": 2,
+          "reps": 8,
+          "sg": "c1",
+          "restSec": 45
+        },
+        {
+          "id": "0499",
+          "sets": 2,
+          "reps": 8,
+          "sg": "c1",
+          "restSec": 45
+        },
+        {
+          "id": "0129",
+          "sets": 2,
+          "reps": 10,
+          "restSec": 45
+        },
+        {
+          "id": "2801",
+          "sets": 2,
+          "reps": 12,
+          "sg": "c2",
+          "restSec": 45
+        },
+        {
+          "id": "0687",
+          "sets": 2,
+          "reps": 20,
+          "sg": "c2",
+          "restSec": 45
+        },
+        {
+          "id": "0630",
+          "sets": 2,
+          "mode": "time",
+          "sec": 40,
+          "prog": "time",
+          "restSec": 45
+        },
+        {
+          "id": "2612",
+          "sets": 5,
+          "mode": "time",
+          "sec": 60,
+          "prog": "time",
+          "restSec": 30
+        }
+      ]
+    },
+    {
+      "id": "wlnw-d",
+      "name": "Full Body Circuit",
+      "emoji": "bolt",
+      "ex": [
+        {
+          "id": "3769",
+          "sets": 2,
+          "reps": 20,
+          "side": true,
+          "restSec": 45
+        },
+        {
+          "id": "2368",
+          "sets": 2,
+          "reps": 16,
+          "side": true,
+          "restSec": 45
+        },
+        {
+          "id": "0489",
+          "sets": 2,
+          "reps": 12,
+          "restSec": 45
+        },
+        {
+          "id": "0514",
+          "sets": 2,
+          "reps": 10,
+          "restSec": 60
+        },
+        {
+          "id": "1160",
+          "sets": 2,
+          "mode": "reps",
+          "reps": 8,
+          "restSec": 60
+        },
+        {
+          "id": "0459",
+          "sets": 2,
+          "mode": "time",
+          "sec": 30,
+          "prog": "time",
+          "restSec": 45
+        },
+        {
+          "id": "3666",
+          "sets": 1,
+          "min": 15,
+          "speed": 5.5
+        }
+      ]
+    },
+    {
+      "id": "wlnw-e",
+      "name": "Easy Cardio",
+      "emoji": "heart",
+      "ex": [
+        {
+          "id": "2141",
+          "sets": 1,
+          "min": 35,
+          "speed": 6
+        },
+        {
+          "id": "3013",
+          "sets": 2,
+          "reps": 20,
+          "restSec": 30
+        }
+      ]
+    }
+  ],
+  "customEx": []
+}
