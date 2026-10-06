@@ -1,7 +1,11 @@
 # personalGym
 
 A standalone, offline copy of the openGym exercise library: 1,324 exercises with a still image
-and an animated GIF each, plus a single-file HTML catalog to browse them.
+and an animated GIF each, a single-file HTML catalog to browse them, and two 12-week weight-loss
+programmes built on it.
+
+Live: https://jeffrey-liwanag-org.github.io/personalGym/ (general) and
+https://jeffrey-liwanag-org.github.io/personalGym/women/ (women's version).
 
 ## Layout
 
@@ -15,11 +19,13 @@ media/
   images/<body-part>/     one JPG per exercise, e.g. images/chest/0025-xxxx.jpg
   gifs/<body-part>/       one animated GIF per exercise, same file stem
 programs/
-  weight-loss-program.html        12-week weight-loss programme, with demos from media/
-  weight-loss-plan.opengym.json   the same programme as an openGym plan file (Plan → Import)
+  weight-loss-program.html              12-week weight-loss programme, demos from media/
+  weight-loss-plan.opengym.json         the same programme as an openGym plan file (Plan → Import)
+  weight-loss-women-program.html        the women's version: lower-body emphasis, shorter rests
+  weight-loss-women-plan.opengym.json   its openGym plan file
 docs/
-  index.html                      the programme as published on GitHub Pages; demos stream from
-                                  the dataset's jsDelivr mirror instead of media/
+  index.html, women/index.html          the two programmes as published on GitHub Pages; demos
+                                        stream from the dataset's jsDelivr mirror instead of media/
 tools/
   build-catalog.js        regenerates data/exercises.json, media/ and the catalog page
   build-program.js        regenerates the programme page and its plan file (`--cdn` for docs/)

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#c2410c">
-<title>Weight Loss Programme</title>
+<title>Weight loss programme</title>
 <style>
 /* Layout: sticky day tabs on top, one day panel at a time, single-column exercise cards. */
 :root{
@@ -20,10 +20,12 @@
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 var(--font)}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+a{color:var(--accent)}
 .page{max-width:720px;margin:0 auto;padding:0 16px calc(24px + env(safe-area-inset-bottom,0px))}
 .bar{position:sticky;top:0;z-index:10;background:var(--bg);padding-top:env(safe-area-inset-top,0px);margin:0 -16px;padding-left:16px;padding-right:16px;border-bottom:1px solid var(--line)}
 .bar h1{font-size:18px;margin:12px 0 8px}
 .bar h1 small{display:block;font-size:13px;font-weight:400;color:var(--muted)}
+.bar h1 small a{white-space:nowrap}
 .tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:10px;scroll-snap-type:x proximity}
 .tabs::-webkit-scrollbar{display:none}
 .tab{flex:0 0 auto;min-width:72px;min-height:var(--tap);padding:6px 10px;border:1px solid var(--line);border-radius:10px;background:var(--panel);text-align:center;scroll-snap-align:start}
@@ -90,7 +92,7 @@ code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:13px}
 <body>
 <div class="page">
 <div class="bar">
-  <h1>Weight loss programme <small>12 weeks · 4 gym days + 1 easy cardio</small></h1>
+  <h1>Weight loss programme <small>12 weeks · 4 gym days + 1 easy cardio · <a href="women/">Women's version →</a></small></h1>
   <div class="tabs" id="tabs"><button class="tab" data-day="1"><span class="td">Mon</span><span class="tn">Full Body A</span></button><button class="tab" data-day="2"><span class="td">Tue</span><span class="tn">Cardio &amp; Core</span></button><button class="tab rest" data-day="3"><span class="td">Wed</span><span class="tn">Rest</span></button><button class="tab" data-day="4"><span class="td">Thu</span><span class="tn">Full Body B</span></button><button class="tab rest" data-day="5"><span class="td">Fri</span><span class="tn">Rest</span></button><button class="tab" data-day="6"><span class="td">Sat</span><span class="tn">Full Body C</span></button><button class="tab" data-day="0"><span class="td">Sun</span><span class="tn">Easy Cardio</span></button></div>
 </div>
 
@@ -107,22 +109,13 @@ code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:13px}
     </ul>
   </details>
   <details><summary>Why the programme looks like this</summary>
-    <ul>
-      <li><b>Fat loss comes from the kitchen, muscle comes from the gym.</b> Aim for a moderate deficit of about 300 to 500 kcal a day and 0.5 to 1 % of body weight lost per week. Faster than that and strength starts to go.</li>
-      <li><b>Protein first.</b> Roughly 1.6 to 2.2 g per kg of body weight a day. It is the biggest lever for keeping muscle in a deficit.</li>
-      <li><b>Full body three times a week</b> keeps every muscle, in 10 to 15 reps where the joints are happy.</li>
-      <li><b>Supersets</b> halve the resting and keep the heart rate up without turning it into a circuit.</li>
-      <li><b>Cardio is mostly easy.</b> Two steady sessions plus a short finisher after each lift. Walk 8 to 10k steps on rest days.</li>
-    </ul>
-    <p>Written for someone with normal gym access, new to or returning to training, with 45 to 55 minutes per session. General training advice, not medical advice.</p>
+    <ul><li><b>Fat loss comes from the kitchen, muscle comes from the gym.</b> Aim for a moderate deficit of about 300 to 500 kcal a day and 0.5 to 1 % of body weight lost per week. Faster than that and strength starts to go.</li><li><b>Protein first.</b> Roughly 1.6 to 2.2 g per kg of body weight a day. It is the biggest lever for keeping muscle in a deficit.</li><li><b>Full body three times a week</b> keeps every muscle, in 10 to 15 reps where the joints are happy.</li><li><b>Supersets</b> halve the resting and keep the heart rate up without turning it into a circuit.</li><li><b>Cardio is mostly easy.</b> Two steady sessions plus a short finisher after each lift. Walk 8 to 10k steps on rest days.</li></ul>
+    <p>Written for someone with normal gym access (dumbbells, a barbell, cables and machines), new to or returning to training, with 45 to 55 minutes per session. General training advice, not medical advice. If you have a condition or an injury, check with a professional first.</p>
   </details>
-  <details><summary>The three phases</summary>
-    <div class="phase"><b>Weeks 1–4 · Learn and build</b><ul><li>Numbers as written. Leave 2 to 3 reps in the tank on the last set.</li><li>Cardio at a pace where talking is easy.</li><li>Weigh in twice a week, watch the weekly average.</li></ul></div>
-    <div class="phase"><b>Weeks 5–8 · Density</b><ul><li>Cut rests by 15 to 30 s on everything except the barbell squat.</li><li>Steady cardio to 40 min; incline up before speed.</li><li>Scale stuck for two weeks? Trim 100 to 200 kcal from the day, not the training.</li></ul></div>
-    <div class="phase"><b>Weeks 9–12 · Push</b><ul><li>Add a fourth set to the first exercise of each lifting day.</li><li>Swap one easy cardio for intervals: 8 × 1 min hard, 1 min easy.</li><li>Week 12 is a deload: two sets of everything, then reassess.</li></ul></div>
-  </details>
+  <details><summary>The three phases</summary><div class="phase"><b>Weeks 1–4 · Learn and build</b><ul><li>Numbers as written. Leave 2 to 3 reps in the tank on the last set.</li><li>Cardio at a pace where talking is easy.</li><li>Weigh in twice a week, watch the weekly average.</li></ul></div><div class="phase"><b>Weeks 5–8 · Density</b><ul><li>Cut rests by 15 to 30 s on everything except the barbell squat.</li><li>Steady cardio to 40 min; incline up before speed.</li><li>Scale stuck for two weeks? Trim 100 to 200 kcal from the day, not the training.</li></ul></div><div class="phase"><b>Weeks 9–12 · Push</b><ul><li>Add a fourth set to the first exercise of each lifting day.</li><li>Swap one easy cardio for intervals: 8 × 1 min hard, 1 min easy.</li><li>Week 12 is a deload: two sets of everything, then reassess.</li></ul></div></details>
+  
   <details><summary>Import into openGym</summary>
-    <p>The file <code>weight-loss-plan.opengym.json</code> next to this page is an openGym plan. In the app, open <b>Plan</b>, choose <b>Import plan</b> and pick it. The five routines arrive with this weekly schedule. Weights are left empty so your first session sets the baseline and the app's progression takes over.</p>
+    <p>The file <a href="weight-loss-plan.opengym.json" download><code>weight-loss-plan.opengym.json</code></a> next to this page is an openGym plan. In the app, open <b>Plan</b>, choose <b>Import plan</b> and pick it. The five routines arrive with this weekly schedule. Weights are left empty so your first session sets the baseline and the app's progression takes over.</p>
   </details>
 </section>
 </div>
@@ -136,22 +129,23 @@ code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:13px}
 
 <script>
 (function(){
+  var K="wl.weight-loss.";
   var today=new Date().getDay();
   var tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('.panel');
+  function iso(){var n=new Date();return n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0')}
   function show(d){
     tabs.forEach(function(t){t.classList.toggle('on',+t.dataset.day===d)});
     panels.forEach(function(p){p.hidden=+p.dataset.day!==d});
     var on=document.querySelector('.tab.on');if(on&&on.scrollIntoView)on.scrollIntoView({block:'nearest',inline:'center'});
-    try{localStorage.setItem('wl.day',d)}catch(e){}
+    try{localStorage.setItem(K+'day',d);localStorage.setItem(K+'dayDate',iso())}catch(e){}
   }
   tabs.forEach(function(t){if(+t.dataset.day===today)t.classList.add('today');t.addEventListener('click',function(){show(+t.dataset.day)})});
-  var start=today;try{var s=localStorage.getItem('wl.day');var sd=localStorage.getItem('wl.dayDate');if(s!=null&&sd===iso())start=+s}catch(e){}
+  var start=today;try{var s=localStorage.getItem(K+'day');var sd=localStorage.getItem(K+'dayDate');if(s!=null&&sd===iso())start=+s}catch(e){}
   show(start);
 
   // Ticks: one localStorage key per exercise, holding the date and the set indexes ticked.
-  function iso(){var n=new Date();return n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0')}
-  function load(key){try{var v=JSON.parse(localStorage.getItem('wl.t.'+key)||'null');return v&&v.d===iso()?v.s:[]}catch(e){return[]}}
-  function save(key,s){try{localStorage.setItem('wl.t.'+key,JSON.stringify({d:iso(),s:s}));localStorage.setItem('wl.dayDate',iso())}catch(e){}}
+  function load(key){try{var v=JSON.parse(localStorage.getItem(K+'t.'+key)||'null');return v&&v.d===iso()?v.s:[]}catch(e){return[]}}
+  function save(key,s){try{localStorage.setItem(K+'t.'+key,JSON.stringify({d:iso(),s:s}))}catch(e){}}
   function paint(key){
     var s=load(key),art=document.querySelector('.ex[data-key="'+key+'"]');if(!art)return;
     var ticks=art.querySelectorAll('.tick');ticks.forEach(function(b){b.classList.toggle('on',s.indexOf(+b.dataset.i)>=0)});
@@ -164,6 +158,7 @@ code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:13px}
   }
   document.querySelectorAll('.ex').forEach(function(a){paint(a.dataset.key)});
   document.querySelectorAll('.done').forEach(function(d){paintDay(d.dataset.rid)});
+  var viewer=document.getElementById('viewer'),vimg=document.getElementById('vimg'),vname=document.getElementById('vname');
   document.addEventListener('click',function(e){
     var b=e.target.closest('.tick');
     if(b){var key=b.dataset.key,i=+b.dataset.i,s=load(key);var at=s.indexOf(i);if(at>=0)s.splice(at,1);else s.push(i);save(key,s);paint(key);paintDay(key.split(':')[0]);return}
@@ -173,7 +168,6 @@ code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:13px}
     if(t){vimg.src=t.dataset.gif;vname.textContent=t.dataset.name;viewer.hidden=false;return}
     if(e.target.closest('#viewer')){viewer.hidden=true;vimg.src='';}
   });
-  var viewer=document.getElementById('viewer'),vimg=document.getElementById('vimg'),vname=document.getElementById('vname');
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){viewer.hidden=true;vimg.src=''}});
 })();
 </script>
